@@ -1,140 +1,210 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="es">
-
-<head>
-    <title>Atlas Indicadores Río Guey</title>
-
- <!--    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./images/favicon_io/site.webmanifest">  -->
-    <link rel="icon" href="./images/favicon_io/favicon.ico">
-    <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.gallerax-0.2.js"></script>
-    <script type="text/javascript" src="js/filter.js"></script>
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/animate/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-
-</head>
-
-<body>
-
-    <div id="wrapper">
-        <p>
-            <center><img src="./images/ucvlogo.png" width="120" height="100" alt="UCV" /></center>
-        </p>
-        <div id="logo">
-            <h1>Sistema de Información Ambiental<span> | Cuenca Río Guey</span></h1>
-        </div>
-
-        <div id="categories">
-            <ul>
-                <li><a href="#" Class="current">Inicio</a></i>
-                <li><a href="./mapa/mapa.html">Localización y Delimitación</a></i>
-                <li><a href="./pages/IndClimEst.html">Clima</a></li>
-                <li><a href="./pages/IndSuelos.html">Suelo</a></li>
-                <li><a href="./MVegetacion/Mapa_Vegetacion.html">Vegetación</a></li>
-                <li><a href="./Pendiente/Pendiente.html">Relieve</a></li>
-                <li><a href="./Hidrografia/Hidrografia.html">Hidrografía</a></li>
-                <li><a href="./abrae/Abrae.html">Abrae</a></li>
-
-
-            </ul>
-        </div>
-
-        <div id="gallery">
-
-
-
-            <div id="output">
-                <img src="./images/1.jpg" alt="" />
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atlas Indicadores Río Guey</title>
+        <link rel="icon" href="./images/favicon_io/favicon.ico">
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate/animate.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+        <style>
+        body {
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        #logo h1 {
+            color: #1565c0;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+        #logo span {
+            color: #43a047;
+            font-weight: 400;
+        }
+        .navbar {
+            background: #1565c0;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #43a047 !important;
+        }
+        .gallery-card {
+            border: none;
+            border-radius: 12px;
+            padding-top: 30 px;
+            box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+            transition: transform 0.2s;
+            height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+            display: flex;
+            flex-direction: column;
+        }
+        .gallery-card .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            background: #e0e0e0;
+        }
+        .gallery-card .card-title {
+            font-size: 1.25rem;
+            color: #1565c0;
+            font-weight: 600;
+        }
+        .gallery-card .card-text {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .gallery-card .card-body {
+            flex: 1 1 auto; /* El cuerpo ocupa el espacio restante */
+        }
+        .mb-custom {
+            margin-bottom: 2rem; /* Ajusta la separación vertical entre tarjetas */
+            margin-left: 15 rem; /* Ajusta la separación horizontal entre tarjetas */
+            padding-bottom: 5 px; /* Espacio entre el borde inferior de la tarjeta y el contenido */
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(21,101,192,0.18);
+        }
+        #footer {
+            background: #1565c0;
+            color: #fff;
+            padding: 10px 0;
+            margin-top: 40px;
+            border-radius: 0 0 12px 12px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container py-4">
+            <div class="text-center mb-3">
+                <img src="./images/logo ucv.png" width="120" height="120"
+                    alt="UCV" />
             </div>
-
-            <div id="captions">
-
-                <div id="nav">
-                    <ul>
-                        <li><a href="#" class="navFirst">[ &lt;&lt; ]</a></li>
-                        <li><a href="#" class="navPrevious">[ &lt; ]</a></li>
-                        <li><a href="#" class="navNext">[ &gt; ]</a></li>
-                        <li><a href="#" class="navLast">[ &gt;&gt; ]</a></li>
-                        <li><a href="#" class="navStopAdvance">[ Stop ]</a></li>
-                        <li><a href="#" class="navPlayAdvance active">[ Play ]</a></li>
+            <div id="logo" class="text-center mb-4">
+                <h1>Sistema de Información Ambiental <span>|<br> Cuenca Río
+                        Guey</span></h1>
+            </div>
+            <nav class="navbar navbar-expand-lg mb-4 rounded">
+                <div class="container-fluid">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active"
+                                href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./mapa/mapa.html">Localización y
+                                Delimitación</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./pages/IndClimEst.html">Clima</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./pages/IndSuelos.html">Suelo</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./MVegetacion/Mapa_Vegetacion.html">Vegetación</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./Pendiente/Pendiente.html">Relieve</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./Hidrografia/Hidrografia.html">Hidrografía</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./abrae/Abrae.html">Abrae</a></li>
                     </ul>
                 </div>
-
-                <span class="line">Límites UCV Maracay</span>
-
-                <br class="clear" />
-
-                <span class="line2">Límites geográficos de la UCV Maracay</span>
-
-
+            </nav>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="./images/1.jpg" class="card-img-top"
+                            alt="Límites Cuenca Río Guey Maracay">
+                        <div class="card-body">
+                            <h5 class="card-title">Límites UCV Maracay</h5>
+                            <p class="card-text">Límites geográficos de la UCV
+                                Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="./images/2.jpg" class="card-img-top"
+                            alt="Clima">
+                        <div class="card-body">
+                            <h5 class="card-title">Clima</h5>
+                            <p class="card-text">Estación climática de la
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="./images/2.jpg" class="card-img-top"
+                            alt="Clima">
+                        <div class="card-body">
+                            <h5 class="card-title">Clima</h5>
+                            <p class="card-text">Estación climática de la
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="./images/3.jpg" class="card-img-top"
+                            alt="Clima">
+                        <div class="card-body">
+                            <h5 class="card-title">Clima</h5>
+                            <p class="card-text">Estación climática de la
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="./images/4.jpg" class="card-img-top"
+                            alt="Clima">
+                        <div class="card-body">
+                            <h5 class="card-title">Clima</h5>
+                            <p class="card-text">Estación climática de la
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="./images/5.jpg" class="card-img-top"
+                            alt="Clima">
+                        <div class="card-body">
+                            <h5 class="card-title">Clima</h5>
+                            <p class="card-text">Estación climática de la
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="./images/6.jpg" class="card-img-top"
+                            alt="Clima">
+                        <div class="card-body">
+                            <h5 class="card-title">Clima</h5>
+                            <p class="card-text">Estación climática de la
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <ul class="thumbnails category1">
-                <li class="first"><img src="./images/1_thumb.jpg"
-                        title="Límites Cuenca Río Guey Maracay ; Límites geográficos de la Cuenca del Río Guey Maracay"
-                        alt="" width="100" height="75" /></li>
-                <li><img src="./images/2_thumb.jpg"
-                        title="Clima ; Estación climática de la Facultad de Agronomía Campus Maracay" alt="" width="100"
-                        height="75" /></li>
-                <li><img src="./images/3_thumb.jpg" title="Suelo ; Foto Campo Experimental FAgro Maracay" alt=""
-                        width="100" height="75" /></li>
-                <li><img src="./images/4_thumb.jpg"
-                        title="Vegetación ; Cultivos de Pimentón en el Instituto de Agronomía FAgro Maracay" alt=""
-                        width="100" height="75" /></li>
-                <li><img src="./images/5_thumb.jpg" title="Relieve ; Vista Panorámica del Limón Maracay" alt=""
-                        width="100" height="75" /></li>
-                <li><img src="./images/6_thumb.jpg"
-                        title="Hidrografía ; Fotografía de Pozo del Diablo, en FAgro Maracay" alt="" width="100"
-                        height="75" /></li>
-            </ul>
-
-            <br class="clear" />
-
-            <script type="text/javascript">
-                $.gallerax({
-                    outputSelector: '#output img', // Output selector
-                    thumbnailsSelector: '.thumbnails li img', // Thumbnails selector
-                    captionSelector: '#captions .line', // Caption selector
-                    captionLines: 2, // Caption lines (3 lines)
-                    fade: 'fast', // Transition speed (fast)
-                    navNextSelector: '#nav a.navNext', // 'Next' selector
-                    navPreviousSelector: '#nav a.navPrevious', // 'Previous' selector
-                    navFirstSelector: '#nav a.navFirst', // 'First' selector
-                    navLastSelector: '#nav a.navLast', // 'Last' selector
-                    navStopAdvanceSelector: '#nav a.navStopAdvance', // 'Stop Advance' selector
-                    navPlayAdvanceSelector: '#nav a.navPlayAdvance', // 'Play Advance' selector
-                    advanceFade: 'slow', // Advance transition speed (slow)
-                    advanceDelay: 4000, // Advance delay (4 seconds)
-                    advanceResume: 12000, // Advance resume (12 seconds)
-                    thumbnailsFunction: function (s) { // Thumbnails function
-
-                        return s.replace(/_thumb\.jpg$/, '.jpg');
-
-                    }
-                });
-            </script>
-
-            <!-- end -->
-
-
+            <div id="footer" class="text-center mt-5">
+                <p>Fotos tomadas en la UCV Campus Maracay.</p>
+            </div>
+            <div
+                style="text-align: center; font-size: 0.75em; color: #888;">Diseño
+                descargado desde <a href="http://www.misplantillas.com/"
+                    style="color:#43a047;">Realizado por Neisha Toussaint</a>.</div>
         </div>
-
-        <div id="footer">
-            <p>
-                Fotos tomadas en la UCV Campus Maracay.
-            </p>
-        </div>
-
-    </div>
-
-    <div style="text-align: center; font-size: 0.75em;">Diseño descargado desde <a
-            href="http://www.misplantillas.com/">plantillas web gratis</a>.</div>
-</body>
-
+        <script src="js/jquery-1.5.2.min.js"></script>
+        <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

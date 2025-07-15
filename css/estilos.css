@@ -1,349 +1,184 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
-
+/* Reset básico y configuración del cuerpo */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    font-family: 'Arial', sans-serif; /* Una fuente base legible */
+    background-color: #090909; /* Color de fondo del cuerpo */
+    color: #f0f0f0; /* Color de texto base para contraste */
+    line-height: 1.6;
+    box-sizing: border-box; /* Mejor manejo de padding y border */
+    overflow-x: hidden; /* Prevenir scroll horizontal innecesario */
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Estilos del encabezado */
 header {
-  width: 100%;
-  height: 100px;
-  border-bottom: 1px solid #55A79A;
-  position: fixed;
-  z-index: 100;
-  background-color: black;
+    background-color: #011a08; /* Un tono ligeramente diferente para el header si se desea */
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 2px solid aquamarine; /* Borde decorativo */
 }
 
-.container-header {
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin: 5px 5px;
+header .container-header {
+    max-width: 1200px; /* Ancho máximo para el contenido del header */
+    margin: 0 auto; /* Centrar el contenido del header */
 }
 
-.container-logo-title {
-  display: flex;
-  margin-top: 10px;
-  margin-left: 5px;
+header .container-logo-title {
+    display: flex;
+    flex-direction: column; /* Apilado en móviles */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre logo y título */
+    margin-bottom: 10px;
 }
 
-.container-logo-title img {
-  width: 100px;
-  height: 80px;
+header .container-logo-title img {
+    max-width: 80px; /* Tamaño del logo responsivo */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados para la imagen */
 }
 
-.container-logo-title h1 {
-  font-size: 12px;
-  font-weight: 20px;
-  margin-top: 15px;
-  margin-left: 5px;
-  background-color: transparent;
-  color: #55A79A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header h1 {
+    margin: 0;
+    font-size: 1.4em; /* Tamaño de fuente responsivo */
+    color: #ffffff;
 }
 
-.menu {
-  position: relative;
-  right: 30px;
-  margin-top: 10px;
-  margin-left: 40px;
-  color: white;
-  background-color: black;
+header h1 strong {
+    display: block; /* Para que ocupe su propia línea si es necesario */
+    font-size: 1.2em; /* Ajustar tamaño del strong */
 }
 
-.menu ul {
-  display: flex;
+header .container-header > h1 span { /* El span con "Localización..." */
+    font-size: 1em; /* Ajustar tamaño del span */
+    color: aquamarine;
+    display: block; /* Para que ocupe su propia línea */
+    margin-top: 5px;
 }
 
-.menu>ul li {
-  list-style: none;
-  font-size: 12px;
-  font-weight: bold;
-  color: white;
-  padding: 10px 5px;
-  border: 1px solid transparent;
-  border-top: 4px solid transparent;
-  cursor: pointer;
-  transition: border 300ms;
-  position: relative;
-  background-color: black;
-}
 
-.menu>ul>li:hover {
-  border: 1px solid #A8A6A7;
-  border-top: 4px solid #55A79A;
-  text-decoration-color: none;
-}
-
-.menu ul li label,
-.menu ul li span {
-  color: #55A79A;
-  text-decoration-color: transparent;
-}
-
-.menu ul li span {
-  font-size: 12px;
-  text-decoration-color: transparent;
-  position: relative;
-  top: 4px;
-}
-
-.menu ul li label {
-  font-size: 22px;
-  position: relative;
-  top: -6px;
-  background-color: transparent;
-}
-
-.menu ul li .icon2 {
-  position: relative;
-  top: -2px;
-}
-
-.menu a {
-  color: white;
-  outline: none;
-  text-decoration: none;
-  text-decoration-style: solid;
-  text-decoration-color: transparent;
-}
-
-.contenedor-galeria {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.galeria__img {
-  width: 300px;
-  height: 200px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  object-fit: cover;
-  filter: brightness(70%);
-  cursor: pointer;
-  animation: escalar 1.5s infinite alternate;
-}
-
-@keyframes escalar {
-  to {
-    transform: scale(1);
-  }
-  from {
-    transform: scale(1.05);
-  }
-}
-
-.galeria__img:hover {
-  filter: brightness(100%);
-}
-
-.modal {
-  width: 100%;
-  min-height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: 0;
-  left: 0;  
-  z-index: 1000000;
-  display: none;
-}
-
-.modal__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.modal__img {
-  width: 50%;  
-}
-
-.modal__boton {
-   position: absolute;
-   top: 10px;
-   right: 10px;
-   color: white;
-   cursor: pointer; 
-   font-weight: bold;
-   width: 50px;
-   height: 50px;
-   line-height: 50px;
-   background: #55A79A;
-   font-size: 2.5em;
-   text-align: center;
-   border-radius: 50%;
-   font-family: monospace;
-}
-
-.modal--open {
-  display: block;
-} 
-
-
-/*Submenu*/
-.menu ul li ul {
-  width: 300px;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  flex-direction: column;
-  border: 1px solid transparent;
-  text-decoration-color: transparent;
-  border-bottom: 1px solid #55A79A;
-  padding: 10px;
-}
-
-.menu ul li ul li {
-  padding: 10px 20px;
-  border-bottom: 1px solid transparent;
-  font-weight: 100;
-  font-size: 12px;
-  text-decoration-color: transparent;
-  position: relative;
-}
-
-.menu ul li ul li:hover {
-  background: #55A79A;
-  text-decoration-color: transparent;
-}
-
-.menu ul li ul li ul {
-  position: absolute;
-  text-decoration-color: transparent;
-  left: 250px;
-  top: 0;
-}
-
-.icon-menu {
-  display: none;
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  background-color: transparent;
-  color: #55A79A;
-}
-
+/* Estilos del contenido principal */
 main {
-  width: 100%;
-  max-width: 1400px;
-  margin: auto;
-  position: relative;
-  top: 140px;
-  background-color: black;
-  font-size: 14px;
-  font-style: normal;
-  margin-left: 25px;
-  background-color: transparent;
-  color: #55A79A;
-
+    padding: 15px;
+    max-width: 1200px; /* Ancho máximo para el contenido principal */
+    margin: 20px auto; /* Centrar y añadir espacio vertical */
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil para el área principal */
+    border-radius: 8px;
 }
 
-@media screen and (max-width: 1000px) {
-  header {
-    height: 80px;
-  }
-
-  .container-logo-title {
-    height: 60px;
-    margin-top: 10px;
-  }
-
-  .container-logo-title img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .container-logo-title h1 {
-    font-size: 8px;
-    margin-top: 6px;
-  }
-
-  .icon-menu {
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 60px;
-    font-size: 12px;
-  }
-
-  body {
-    transition: all 300ms;
-  }
-
-  .body2 {
-    transform: translateX(-300px);
-  }
-
-  .menu {
-    width: 300px;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    right: -300px;
-    background: #2D2F30;
-    margin-top: 0px;
-    overflow-y: scroll;
-  }
-
-  .menu ul {
-    flex-direction: column;
-  }
-
-  .menu ul li {
-    padding: 10px 20px;
-  }
-
-  .menu ul li ul {
-    top: 0;
-    border-bottom: 1px solid transparent;
-    background: #2D2F30;
-  }
-
-  .menu ul li:hover {
-    border: 1px solid transparent;
-    border-top: 4px solid transparent;
-  }
-
-  .menu ul li ul {
-    width: 100%;
-    position: relative;
-    border: none;
-    padding: 2px;
-  }
-
-  .menu ul li ul li {
-    border-bottom: 1px solid #414141;
-  }
-
-  .menu ul li ul li:hover {
-    background: #363636;
-  }
-
-  .menu ul li ul li ul {
-    width: 100%;
-    position: relative;
-    left: 0px;
-    top: 6px;
-  }
-
-  #map {
-    width: 400px;
-    height: 317px;
-  }
+/* Estilo para el enlace de regresar */
+.regresar-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgb(20, 24, 22);
+    color: #02220b;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Espacio debajo del enlace */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.regresar-link:hover, .regresar-link:focus {
+    background-color: #02220b;
+    color: rgb(25, 30, 29);
+    outline: 2px solid aquamarine;
+}
+
+.regresar-link .icon-home {
+    margin-right: 5px; /* Espacio entre el icono y el texto si tienes uno */
+}
+
+/* Contenedor del mapa */
+#map {
+    width: 100%; /* Ancho completo del contenedor padre (main) */
+    height: 65vh; /* Altura relativa al viewport (ej. 65% de la altura de la pantalla) */
+    min-height: 300px; /* Altura mínima para evitar que el mapa sea demasiado pequeño */
+    max-height: 700px; /* Altura máxima opcional */
+    border: 1px solid #333; /* Borde sutil para el mapa */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio debajo del mapa */
+}
+
+/* Estilos para el texto de la fuente */
+.fuente-elaboracion {
+    text-align: center;
+    font-size: 0.9em;
+    color: #bbb; /* Color más suave para el texto de la fuente */
+    margin-top: 20px;
+}
+
+/* Media Queries para ajustes en pantallas más grandes */
+@media (min-width: 600px) {
+    header .container-logo-title {
+        flex-direction: row; /* Logo y título en la misma línea */
+        justify-content: flex-start; /* Alineación al inicio */
+    }
+
+    header .container-logo-title img {
+        max-width: 100px;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+        text-align: left; /* Alinear texto del header a la izquierda */
+        margin-left: 15px; /* Espacio entre logo y texto */
+    }
+    
+    header .container-header > h1 span { /* El span con "Localización..." */
+       font-size: 1.2em;
+    }
+
+    #map {
+        height: 70vh; /* Mapa un poco más alto en pantallas medianas */
+    }
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header .container-header > h1 span { /* El span con "Localización..." */
+       font-size: 1.4em;
+    }
+
+    #map {
+        height: 75vh; /* Aún más alto en pantallas grandes */
+    }
+}
+
+/* Estilos para el popup de OpenLayers (pueden complementar los inline) */
+.ol-popup {
+    background-color: rgba(250, 250, 250, 0.95); /* Fondo ligeramente transparente */
+    border-radius: 8px;
+    border: 1px solid #555;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.ol-popup-closer {
+    color: #333;
+    font-size: 1.2em; /* Hacer el botón de cerrar un poco más grande */
+}
+
+#popup-content {
+    font-size: 0.85em; /* Tamaño de fuente para el contenido del popup */
+    max-height: 200px; /* Altura máxima para el contenido del popup */
+    overflow-y: auto; /* Scroll si el contenido es muy largo */
+}
+
+/* Asegurar que las imágenes dentro del popup sean responsivas si las hubiera */
+#popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
