@@ -106,3 +106,12 @@ body {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 24px rgba(21, 101, 192, 0.18);
 }
+
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) brightness(2);
+}
