@@ -1,6 +1,7 @@
 /* Reset básico y configuración del cuerpo */
 body {
-    font-family: 'Montserrat', Arial, sans-serif; /* Una fuente base legible */
+    font-family: 'Montserrat', Arial, sans-serif;
+    /* Una fuente base legible */
     background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
 }
 
@@ -29,16 +30,16 @@ body {
 
 .navbar-nav .nav-link:hover {
     color: #b5eeb8 !important;
-    font: bold;
 }
 
 .gallery-card {
     border: none;
     border-radius: 12px;
     padding-top: 30 px;
-    box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+    box-shadow: 0 2px 8px rgba(21, 101, 192, 0.08);
     transition: transform 0.2s;
-    height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+    height: 100%;
+    /* Hace que todas las tarjetas tengan la misma altura */
     display: flex;
     flex-direction: column;
 }
@@ -64,18 +65,22 @@ body {
 }
 
 .gallery-card .card-body {
-    flex: 1 1 auto; /* El cuerpo ocupa el espacio restante */
+    flex: 1 1 auto;
+    /* El cuerpo ocupa el espacio restante */
 }
 
 .mb-custom {
-    margin-bottom: 2rem; /* Ajusta la separación vertical entre tarjetas */
-    margin-left: 15 rem; /* Ajusta la separación horizontal entre tarjetas */
-    padding-bottom: 5 px; /* Espacio entre el borde inferior de la tarjeta y el contenido */
+    margin-bottom: 2rem;
+    /* Ajusta la separación vertical entre tarjetas */
+    margin-left: 15 rem;
+    /* Ajusta la separación horizontal entre tarjetas */
+    padding-bottom: 5 px;
+    /* Espacio entre el borde inferior de la tarjeta y el contenido */
 }
 
 .gallery-card:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(21,101,192,0.18);
+    box-shadow: 0 8px 24px rgba(21, 101, 192, 0.18);
 }
 
 #footer {
@@ -86,11 +91,18 @@ body {
     border-radius: 0 0 12px 12px;
 }
 
-.regresar-link {
-    color: #1565c0;
+.btn-regresar {
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(21, 101, 192, 0.08);
+    font-size: 1rem;
+    border-radius: 8px;
+    color: #1565c0 !important;
+    border: none;
     text-decoration: none;
-    font-weight: 500;
-}   
+}
 
-
-
+.btn-regresar:hover {
+    color: #43a047 !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(21, 101, 192, 0.18);
+}
