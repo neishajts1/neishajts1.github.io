@@ -115,3 +115,17 @@ body {
 .navbar-toggler-icon {
     filter: invert(1) brightness(2);
 }
+
+#map {
+    width: 1121px;
+    height: 635px;
+}
+
+.item-link {    
+    font-size: 1.25rem;
+    color: #1565c0;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
