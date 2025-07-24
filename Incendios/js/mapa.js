@@ -812,7 +812,7 @@
             div_ano.className = "slider";
             document.getElementById("menu").appendChild(div_ano);
             var lab_ano = document.createElement('div');
-            lab_ano.innerHTML  = 'ano: <span id="val_ano"></span>';
+            lab_ano.innerHTML  = 'Año: <span id="val_ano"></span>';
             lab_ano.className = 'filterlabel';
             document.getElementById("menu").appendChild(lab_ano);
             var reset_ano = document.createElement('div');
