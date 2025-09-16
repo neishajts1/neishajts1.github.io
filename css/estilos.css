@@ -129,6 +129,14 @@ body {
     transition: color 0.2s;
 }
 
+p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
 #leyenda-flotante {
     position: absolute;
     top: 30px;
