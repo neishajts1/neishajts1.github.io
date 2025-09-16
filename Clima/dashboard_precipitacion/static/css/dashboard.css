@@ -1,0 +1,26 @@
+body {
+    background: #f4f6f9;
+}
+
+.stat {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px #ddd;
+    font-weight: bold;
+}
+
+.stat span {
+    display: block;
+    font-size: 1.2rem;
+    color: #1a4f8b;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
