@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atlas Indicadores Río Guey</title>
+        <link rel="icon"
+            href="{{ url_for('static', filename='images/favicon_io/favicon.ico') }}">
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='css/animate/animate.css') }}">
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='css/estilos.css') }}">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    </head>
+
+    <body>
+        <div class="container py-4">
+            <div class="text-center mb-3">
+                <img
+                    src="{{ url_for('static', filename='images/logo ucv.png') }}"
+                    width="120" height="120" alt="UCV" />
+            </div>
+
+            <div id="logo" class="text-center mb-4">
+                <h1>Atlas Temático de Indicadores Ambientales <span>|<br> Cuenca
+                        Río Guey</span></h1>
+            </div>
+
+            <nav class="navbar navbar-expand-lg mb-4 shadow"
+                style="border-radius: 12px;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white fw-bold"
+                        href="#">Inicio</a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item"><a
+                                    class="nav-link active text-white"
+                                    href="#">Localización y
+                                    Delimitación</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="{{ url_for('dashboard') }}">Clima</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="#">Suelo</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="#">Vegetación</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="#">Relieve</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="#">Hidrografía</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="#">Abrae</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="#">Incendios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                </div>
+            </div>
+
+            <div id="galeria" class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img
+                            src="{{ url_for('static', filename='images/1.jpg') }}"
+                            class="card-img-top"
+                            alt="Límites Cuenca Río Guey Maracay">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="item-link"
+                                    href="#">Límites UCV Maracay</a></h5>
+                            <p class="card-text">Límites geográficos de la UCV
+                                Maracay</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img
+                            src="{{ url_for('static', filename='images/2.png') }}"
+                            class="card-img-top" alt="Clima">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a class="item-link"
+                                    href="{{ url_for('dashboard') }}">Clima</a>
+                            </h5>
+                            <p class="card-text">
+                                Visualización interactiva de lluvias mensuales y
+                                promedios anuales en FAgro (1973-2015).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img
+                            src="{{ url_for('static', filename='images/3.jpg') }}"
+                            class="card-img-top"
+                            alt="Suelos">
+                        <div class="card-body">
+                            <h5 class="card-title">Suelos</h5>
+                            <p class="card-text">Caracterización de suelos
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="{{ url_for('static', filename='images/4.jpg' )
+                            }}" class="card-img-top"
+                            alt="Vegetación">
+                        <div class="card-body">
+                            <h5 class="card-title">Vegetación</h5>
+                            <p class="card-text">Plantación de Pimentones
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="{{ url_for('static', filename='images/5.jpg' )
+                            }}" class="card-img-top"
+                            alt="Relieve">
+                        <div class="card-body">
+                            <h5 class="card-title">Relieve</h5>
+                            <p class="card-text">Tipo de relieve de la UCV
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="{{ url_for('static', filename='images/6.jpg' )
+                            }}" class="card-img-top"
+                            alt="Hidrografía">
+                        <div class="card-body">
+                            <h5 class="card-title">Hidrografía</h5>
+                            <p class="card-text">Tipo de hidrografía de la UCV
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="{{ url_for('static', filename='images/7.jpg' )
+                            }}" class="card-img-top"
+                            alt="Abrae">
+                        <div class="card-body">
+                            <h5 class="card-title">Abrae</h5>
+                            <p class="card-text">Áreas Bajo Régimen de
+                                Administración Especial
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="{{ url_for('static', filename='images/8.png' )
+                            }}" class="card-img-top"
+                            alt="Incendios">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="item-link"
+                                    href="#">Incendios</a></h5>
+                            <p class="card-text">Frecuencia de incendios en la
+                                Facultad de Agronomía Campus Maracay</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="footer" class="text-center mt-5">
+                <p></p>
+            </div>
+
+            <div style="text-align: center; font-size: 0.75em; color: #888;">
+                Fotos tomadas en la UCV Campus Maracay. <br>
+                © 2025 Atlas Temático de Indicadores Ambientales - UCV <br>
+                Diseño Realizado por Neisha Toussaint
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

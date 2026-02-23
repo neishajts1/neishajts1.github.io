@@ -56,12 +56,14 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card gallery-card">
-                        <img src="./images/2.jpg" class="card-img-top"
-                            alt="Clima">
+                        <img src="{{ url_for('static', filename='images/8.png') }}" class="card-img-top" alt="Clima">
                         <div class="card-body">
-                            <h5 class="card-title"><a class="item-link" href="./templates/Clima.html">Clima</a></h5>
-                            <p class="card-text">Estación climática de la
-                                Facultad de Agronomía Campus Maracay</p>
+                            <h5 class="card-title">
+                                <a class="item-link" href="{{ url_for('dashboard') }}">Precipitaciones</a>
+                            </h5>
+                            <p class="card-text">
+                                Visualización interactiva de lluvias mensuales y promedios anuales (1973-2015).
+                            </p>
                         </div>
                     </div>
                 </div>
